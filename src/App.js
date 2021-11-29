@@ -1,4 +1,5 @@
 import React from "react";
+import ClockIn from './Clock';
 //import Potato from "./potato"; //java의 import개념으로 봐야하는 건가? //생성한 component는 반드시 app 안에 들어가야 한다. //파일을 분리한다면 이렇게...
 
 const langname = [
@@ -17,8 +18,12 @@ function Language({name, fav}){
 }
 
 function App() {
+  console.log("test console");
   return (
     <div className="App">
+    <button id="clock" onclick="<ClockIn />">
+      click me!
+    </button>
       <div>
         {langname.map(kind => <Language key={kind.id} name={kind.name} fav={kind.like} /> )}
       </div>
